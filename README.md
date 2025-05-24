@@ -14,18 +14,6 @@ Predicting Myers–Briggs Type Indicator (MBTI) personality categories directly 
 * **Robust Evaluation** Comprehensive metrics including accuracy, precision, recall, and F1-score for both overall performance and individual MBTI dimensions.
 
 ---
-
-## 🗂️ Repository Structure
-
-```
-.
-├── benchmark_models.py      # All baseline implementations (TF-IDF+SVM, CNN, BiLSTM, BERT, RoBERTa)
-├── rcnn_roberta_model.py    # Proposed RCNN-RoBERTa model implementation
-├── data/                    # (create this folder) raw datasets
-├── requirements.txt         # Python dependencies
-└── README.md               # This file
-```
-
 ---
 
 ## 🚀 Quick Start
@@ -58,20 +46,20 @@ $ mkdir -p data
 ### 3. Run Benchmark Models
 
 ```bash
-$ python benchmark_models.py
+$ python benchmark_models.ipynb
 ```
 
 This will run all baseline models:
 - TF-IDF + SVM
 - CNN with embeddings
-- BiLSTM + GloVe
 - BERT-base
 - Pure RoBERTa
+- KNN+XGboost
 
 ### 4. Run Proposed RCNN-RoBERTa Model
 
 ```bash
-$ python rcnn_roberta_model.py
+$ python rcnn_roberta_model.ipynb
 ```
 
 This runs our proposed model that combines:
